@@ -36,9 +36,22 @@
 ### redux 셋업
 
 ```javascript
+redux, react-redux 설치
+npm install redux react-redux 
+
+index.js
+import { Provider } from 'react-redux';
+
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
 src 폴더 안에 redux 폴더
 redux 폴더 안에 store.js, reducer 폴더
 reducer 폴더 안에 reducer.js
+(이때 reducer를 폴더로 만드는 이유는 기능에 따라 여러 파일로 만들어 줄 수 있기 때문)
 
 reducer는 두개의 매개변수를 받음 (state, action)
 state는 초기화가 필요함(어떤 state가 있는지 알기위해)
